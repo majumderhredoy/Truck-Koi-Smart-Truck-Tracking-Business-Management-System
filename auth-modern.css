@@ -1,0 +1,235 @@
+/* =============================================
+   TRUCK KOI — MODERN AUTH STYLES (PRO)
+   ============================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-red: #DC143C;
+    --primary-red-dark: #B71C1C;
+    --bg-gray: #F8FAFC;
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --input-focus: rgba(220, 20, 60, 0.15);
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+}
+
+body.auth-page {
+    background: radial-gradient(circle at top right, #FFF, #F1F5F9);
+    font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.auth-container {
+    background: #FFF;
+    width: 100%;
+    max-width: 440px;
+    padding: 56px 48px;
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    position: relative;
+    z-index: 10;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.auth-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    text-decoration: none;
+}
+
+.auth-logo i {
+    font-size: 36px;
+    color: var(--primary-red);
+}
+
+.auth-logo span {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.auth-logo sup {
+    font-size: 10px;
+    background: var(--primary-red);
+    color: #FFF;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+    top: -14px;
+}
+
+.auth-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #475569;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #FFF;
+}
+
+.form-control::placeholder {
+    color: #94A3B8;
+    font-weight: 400;
+}
+
+.form-control:focus {
+    border-color: var(--primary-red);
+    outline: none;
+    box-shadow: 0 0 0 4px var(--input-focus);
+    background: #FFF;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper .form-control {
+    padding-right: 54px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.password-toggle:hover {
+    color: var(--primary-red);
+}
+
+/* Hide native pass reveal in Edge/IE */
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--primary-red) 0%, #C41235 100%);
+    color: #FFF;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(220, 20, 60, 0.2);
+}
+
+.btn-auth:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(220, 20, 60, 0.3);
+    filter: brightness(1.1);
+}
+
+.btn-auth:active {
+    transform: translateY(0);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.auth-footer a {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-error {
+    background: #FFF1F2;
+    color: #991B1B;
+    border: 1px solid #FECACA;
+}
+
+@media (max-width: 500px) {
+    .auth-container {
+        padding: 40px 24px;
+        max-width: 100%;
+        border-radius: 0;
+        min-height: 100vh;
+        box-shadow: none;
+        border: none;
+    }
+}

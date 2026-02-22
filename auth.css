@@ -1,0 +1,240 @@
+/* =============================================
+   TRUCK KOI — PATHAO-STYLE AUTH
+   ============================================= */
+
+:root {
+    --brand-red: #DC143C;
+    --brand-dark: #2a2a2a;
+    --bg-light: #f8f9fa;
+    --text-main: #333;
+    --text-muted: #666;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Bengali', 'Hind Siliguri', sans-serif;
+}
+
+body.auth-page {
+    background: var(--bg-light);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.auth-split-layout {
+    display: flex;
+    height: 100%;
+}
+
+/* Brand Side */
+.auth-brand-side {
+    flex: 1;
+    background: var(--brand-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-brand-side::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    top: -50%;
+    left: -50%;
+}
+
+.brand-content {
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.auth-logo svg {
+    width: 60px;
+    height: 60px;
+}
+
+.brand-title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.brand-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.brand-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.stat-label {
+    opacity: 0.8;
+}
+
+/* Form Side */
+.auth-form-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: var(--white);
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-header {
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 32px;
+    color: var(--brand-dark);
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: var(--text-muted);
+}
+
+.pathao-form .form-group {
+    margin-bottom: 25px;
+}
+
+.pathao-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.pathao-form input[type="text"],
+.pathao-form input[type="tel"],
+.pathao-form input[type="email"],
+.pathao-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.pathao-form input:focus {
+    outline: none;
+    border-color: var(--brand-red);
+    box-shadow: 0 0 0 4px rgba(220, 20, 60, 0.1);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.forgot-link {
+    color: var(--brand-red);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: var(--brand-red);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #b81134;
+    transform: translateY(-2px);
+}
+
+.switch-auth {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.switch-auth a {
+    color: var(--brand-red);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.alert.error {
+    background: rgba(220, 20, 60, 0.1);
+    color: var(--brand-red);
+    border: 1px solid rgba(220, 20, 60, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.checkbox-group a {
+    color: var(--brand-red);
+    text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .auth-brand-side {
+        display: none;
+    }
+}
